@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud-based mHealth Application</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font (best practice) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styling for a clean, professional look */
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1);
+        }
+    </style>
+    <!-- Load Lucide Icons CDN for visual elements -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Hero Section -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-cyan-600">mHealth CloudApp</h1>
+            <nav class="hidden md:block">
+                <a href="#features" class="text-gray-600 hover:text-cyan-600 px-3 py-2 rounded-md font-medium transition duration-150">Features</a>
+                <a href="#simulator" class="text-gray-600 hover:text-cyan-600 px-3 py-2 rounded-md font-medium transition duration-150">Simulator</a>
+                <a href="#download" class="text-white bg-cyan-600 hover:bg-cyan-700 px-3 py-2 rounded-full font-medium transition duration-150 ml-4">Download</a>
+                <a href="#tech" class="text-gray-600 hover:text-cyan-600 px-3 py-2 rounded-md font-medium transition duration-150">Technology</a>
+                <a href="#security" class="text-gray-600 hover:text-cyan-600 px-3 py-2 rounded-md font-medium transition duration-150">Security</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Content -->
+        <section class="bg-cyan-600 text-white pt-16 pb-24 sm:pt-24 sm:pb-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4 uppercase tracking-wider">
+                    Project Overview
+                </div>
+                <h2 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+                    Secure & Seamless Mobile Health Monitoring
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto mb-8 opacity-90">
+                    A next-generation cloud-based mobile health (mHealth) application designed to empower users with personalized health monitoring, integrated securely with enterprise-grade cloud services.
+                </p>
+                <a href="#download" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-cyan-600 bg-white hover:bg-cyan-50 transition duration-300 transform hover:scale-105">
+                    Download the App
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-16 sm:py-24 -mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-3xl font-bold text-gray-900 text-center mb-12">Key Application Features</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature Card 1: Health Monitoring -->
+                    <div class="bg-white p-8 rounded-xl card-shadow transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+                        <i data-lucide="activity" class="w-8 h-8 text-cyan-600 mb-4"></i>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Real-time Health Monitoring</h4>
+                        <p class="text-gray-600">
+                            Collect, visualize, and analyze vital signs and health metrics (e.g., heart rate, sleep patterns) using secure, high-availability cloud resources for storage and processing.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 2: Medication Reminders -->
+                    <div class="bg-white p-8 rounded-xl card-shadow transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+                        <i data-lucide="bell-ring" class="w-8 h-8 text-cyan-600 mb-4"></i>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Smart Medication Reminders</h4>
+                        <p class="text-gray-600">
+                            Customizable and reliable push notifications integrated with the cloud backend to ensure timely adherence to complex medication schedules.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 3: Wearable Integration -->
+                    <div class="bg-white p-8 rounded-xl card-shadow transition duration-300 hover:shadow-xl hover:translate-y-[-4px]">
+                        <i data-lucide="watch" class="w-8 h-8 text-cyan-600 mb-4"></i>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Wearable Device Integration</h4>
+                        <p class="text-gray-600">
+                            Seamless integration with leading wearable fitness and health trackers to aggregate data and provide a holistic view of user wellness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Health Simulator Section -->
+        <section id="simulator" class="py-16 sm:py-24 bg-cyan-600/5">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Interactive Health Simulator</h3>
+                <p class="text-lg text-gray-600 mb-10">
+                    Enter a simulated Blood Pressure reading to see the instantaneous health status analysis.
+                </p>
+
+                <div class="bg-white p-8 rounded-xl card-shadow shadow-xl">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                        <!-- Systolic Input -->
+                        <div>
+                            <label for="systolic" class="block text-sm font-medium text-gray-700 text-left mb-1">Systolic Pressure (mmHg)</label>
+                            <input type="number" id="systolic" placeholder="e.g., 125" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-cyan-500 focus:border-cyan-500 transition duration-150">
+                        </div>
+                        <!-- Diastolic Input -->
+                        <div>
+                            <label for="diastolic" class="block text-sm font-medium text-gray-700 text-left mb-1">Diastolic Pressure (mmHg)</label>
+                            <input type="number" id="diastolic" placeholder="e.g., 85" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-cyan-500 focus:border-cyan-500 transition duration-150">
+                        </div>
+                    </div>
+
+                    <button onclick="checkBP()" class="w-full bg-cyan-600 text-white font-semibold py-3 rounded-xl hover:bg-cyan-700 transition duration-300 transform hover:scale-[1.01] shadow-lg shadow-cyan-500/50">
+                        Analyze Reading
+                    </button>
+
+                    <!-- Status Output Area -->
+                    <div id="status-output" class="mt-8 p-4 rounded-lg text-left hidden transition-all duration-300 ease-in-out">
+                        <p class="font-bold text-lg mb-1" id="status-title">Health Status:</p>
+                        <p id="status-message" class="text-base"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download App Section -->
+        <section id="download" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Get the mHealth CloudApp</h3>
+                <p class="text-lg text-gray-600 mb-10">
+                    Experience secure and personalized health monitoring. Download the app today for Android and iOS.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <!-- Placeholder Download Button 1 (Google Play) -->
+                    <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-gray-900 hover:bg-gray-700 transition duration-300 transform hover:scale-105 shadow-xl">
+                        <i data-lucide="monitor" class="w-5 h-5 mr-2"></i>
+                        Download on Google Play (Placeholder)
+                    </a>
+                    <!-- Placeholder Download Button 2 (App Store) -->
+                    <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-xl text-gray-900 bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-xl">
+                        <i data-lucide="apple" class="w-5 h-5 mr-2"></i>
+                        Download on the App Store (Placeholder)
+                    </a>
+                </div>
+                
+                <p class="text-sm text-gray-500 mt-6">
+                    <!-- Link updated to run the download function -->
+                    <i data-lucide="code" class="w-4 h-4 inline mr-1"></i>
+                    Need the source code? 
+                    <a href="#" onclick="downloadSourceCode(event)" class="text-cyan-600 hover:text-cyan-700 font-medium cursor-pointer">Download this index.html file</a>
+                </p>
+            </div>
+        </section>
+        
+        <!-- Technology Stack Section -->
+        <section id="tech" class="py-16 sm:py-24 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-3xl font-bold text-gray-900 mb-12">Technology Stack</h3>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+                    We leverage a powerful, modern stack to ensure high performance, cross-platform compatibility, and scalability for handling massive amounts of health data.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <!-- Tech Card 1: React Native -->
+                    <div class="bg-white p-6 rounded-xl w-full sm:w-60 card-shadow">
+                        <i data-lucide="smartphone" class="w-8 h-8 text-blue-500 mb-3 mx-auto"></i>
+                        <h4 class="text-lg font-semibold text-gray-900">React Native</h4>
+                        <p class="text-sm text-gray-500">Cross-Platform Mobile App Development</p>
+                    </div>
+                    
+                    <!-- Tech Card 2: Cloud Backend -->
+                    <div class="bg-white p-6 rounded-xl w-full sm:w-60 card-shadow">
+                        <i data-lucide="cloud" class="w-8 h-8 text-orange-500 mb-3 mx-auto"></i>
+                        <h4 class="text-lg font-semibold text-gray-900">Cloud Backend (Firebase / AWS)</h4>
+                        <p class="text-sm text-gray-500">Scalable Data Storage & Processing</p>
+                    </div>
+
+                    <!-- Tech Card 3: Data Persistence -->
+                    <div class="bg-white p-6 rounded-xl w-full sm:w-60 card-shadow">
+                        <i data-lucide="database" class="w-8 h-8 text-green-600 mb-3 mx-auto"></i>
+                        <h4 class="text-lg font-semibold text-gray-900">NoSQL/Cloud Firestore</h4>
+                        <p class="text-sm text-gray-500">Flexible, Real-time Data Synchronization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security & Compliance Section -->
+        <section id="security" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-cyan-50 border-l-4 border-cyan-600 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 pt-1">
+                             <i data-lucide="shield-check" class="w-10 h-10 text-cyan-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-3">Commitment to Data Security & Compliance</h3>
+                            <p class="text-lg text-gray-700 mb-4">
+                                Data security and patient privacy are the highest priority. The application leverages cloud service encryption and access controls to maintain compliance with stringent healthcare data protection standards.
+                            </p>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                                <li>End-to-end encryption for all data transmission and storage.</li>
+                                <li>Adherence to secure development lifecycle best practices.</li>
+                                <li>Designed with key principles of **HIPAA** (US) and **GDPR** (EU) in mind for protecting Personal Health Information (PHI).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-sm">&copy; 2025 mHealth App Project. All rights reserved.</p>
+            <p class="text-xs text-gray-400 mt-2">Project Developed using React Native and Cloud Services.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide icons and add custom logic -->
+    <script>
+        lucide.createIcons();
+
+        /**
+         * Simulates processing a health reading (Blood Pressure) and provides a status.
+         */
+        function checkBP() {
+            const systolic = parseInt(document.getElementById('systolic').value);
+            const diastolic = parseInt(document.getElementById('diastolic').value);
+            const outputDiv = document.getElementById('status-output');
+            const titleElement = document.getElementById('status-title');
+            const messageElement = document.getElementById('status-message');
+
+            outputDiv.className = 'mt-8 p-4 rounded-lg text-left';
+            outputDiv.classList.remove('hidden');
+
+            // 1. Input Validation
+            if (isNaN(systolic) || isNaN(diastolic) || systolic <= 0 || diastolic <= 0) {
+                outputDiv.classList.add('bg-red-100', 'border-red-500', 'text-red-700', 'border');
+                titleElement.textContent = 'Error: Invalid Input';
+                messageElement.textContent = 'Please enter valid numerical readings for both Systolic and Diastolic pressure.';
+                return;
+            }
+
+            // 2. Classification Logic (Based on AHA/ACC Guidelines - Simplified)
+            let status = '';
+            let colorClass = '';
+            let message = '';
+
+            if (systolic >= 180 || diastolic >= 120) {
+                status = 'Hypertensive Crisis';
+                colorClass = 'bg-red-600 text-white';
+                message = 'A Hypertensive Crisis requires immediate medical attention. Please consult a professional immediately.';
+            } else if (systolic >= 140 || diastolic >= 90) {
+                status = 'Hypertension Stage 2';
+                colorClass = 'bg-red-400 text-white';
+                message = 'Your reading indicates Stage 2 Hypertension. Follow up with your doctor for treatment.';
+            } else if (systolic >= 130 || diastolic >= 80) {
+                status = 'Hypertension Stage 1';
+                colorClass = 'bg-orange-300 text-gray-800';
+                message = 'This is classified as Stage 1 Hypertension. Lifestyle changes and monitoring are recommended.';
+            } else if (systolic >= 120 && diastolic < 80) {
+                status = 'Elevated Blood Pressure';
+                colorClass = 'bg-yellow-300 text-gray-800';
+                message = 'Your blood pressure is elevated. Continue healthy lifestyle habits to prevent progression.';
+            } else if (systolic < 120 && diastolic < 80) {
+                status = 'Normal Blood Pressure';
+                colorClass = 'bg-green-500 text-white';
+                message = 'Your reading is within the normal range. Keep up the good work!';
+            } else {
+                 status = 'Atypical Reading';
+                colorClass = 'bg-indigo-200 text-gray-800';
+                message = 'The systolic and diastolic values are inconsistent. Please take the reading again or consult a doctor.';
+            }
+
+            // 3. Update Output
+            outputDiv.className = `mt-8 p-4 rounded-xl shadow-lg ${colorClass} transition-all duration-300 ease-in-out`;
+            titleElement.textContent = `Health Status: ${status}`;
+            messageElement.textContent = message;
+        }
+
+        /**
+         * Downloads the current HTML content of the page as an index.html file.
+         */
+        function downloadSourceCode(event) {
+            event.preventDefault(); // Stop the link from navigating
+
+            // Get the entire HTML content of the document
+            const content = document.documentElement.outerHTML;
+            const filename = 'index.html';
+            const blob = new Blob([content], { type: 'text/html' });
+
+            // Create a temporary link element for the download
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = filename;
+
+            // Programmatically click the link to trigger the download
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            // Console log for success feedback
+            console.log(`Successfully triggered download for ${filename}`);
+        }
+    </script>
+</body>
+</html>
